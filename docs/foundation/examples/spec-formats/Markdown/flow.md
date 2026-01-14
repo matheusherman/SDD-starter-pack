@@ -1,0 +1,12 @@
+## Flow – Order lifecycle
+
+States: CREATED, PAID, SHIPPED, DELIVERED, CANCELLED
+
+Transitions:
+  CREATED -> PAID
+  PAID -> SHIPPED
+  SHIPPED -> DELIVERED
+  CREATED -> CANCELLED
+
+Rule:
+  SHIPPED cannot be CANCELLED
