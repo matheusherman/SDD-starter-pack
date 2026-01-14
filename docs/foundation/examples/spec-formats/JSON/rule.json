@@ -1,0 +1,17 @@
+{
+    "rule": "order_pricing",
+    "inputs": {
+      "subtotal": "number",
+      "customerType": ["REGULAR", "PREMIUM"]
+    },
+    "logic": {
+      "discount": {
+        "if": "customerType == PREMIUM",
+        "then": "subtotal * 0.10",
+        "else": 0
+      },
+      "tax": "(subtotal - discount) * 0.08",
+      "total": "subtotal - discount + tax"
+    }
+  }
+  
