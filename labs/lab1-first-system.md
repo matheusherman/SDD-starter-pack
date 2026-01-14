@@ -1,9 +1,3 @@
-Abaixo está o **Lab 1 completo** — já no formato oficial do SDD Starter Pack.
-
----
-
-# `/labs/lab-1-first-system/README.md`
-
 # Lab 1 – Build your first SDD system
 
 Neste laboratório você vai construir um sistema funcional **sem escrever código manualmente**, usando apenas especificações como fonte da verdade.
