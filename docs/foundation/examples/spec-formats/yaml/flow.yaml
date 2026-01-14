@@ -1,0 +1,10 @@
+flow:
+  order_lifecycle:
+    states: [CREATED, PAID, SHIPPED, DELIVERED, CANCELLED]
+    transitions:
+      - CREATED -> PAID
+      - PAID -> SHIPPED
+      - SHIPPED -> DELIVERED
+      - CREATED -> CANCELLED
+    rules:
+      - SHIPPED cannot be CANCELLED

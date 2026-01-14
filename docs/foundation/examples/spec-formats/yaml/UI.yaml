@@ -1,0 +1,13 @@
+ui:
+  checkout_page:
+    fields:
+      - name: items_list
+        editable: true
+      - name: customer_type
+        type: select
+        options: [REGULAR, PREMIUM]
+      - name: total_price
+        readonly: true
+    rules:
+      - recalc total on item change
+      - disable submit if items_list is empty

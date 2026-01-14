@@ -1,0 +1,17 @@
+api:
+  create_order:
+    endpoint: POST /api/orders
+    input:
+      items:
+        type: array
+        item:
+          productId: string
+          quantity: number
+      customerType: [REGULAR, PREMIUM]
+    output:
+      orderId: string
+      total: number
+    rules:
+      - quantity >= 1
+      - if customerType == PREMIUM then discount = subtotal * 0.10
+      - tax = (subtotal - discount) * 0.08
