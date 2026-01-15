@@ -55,6 +55,8 @@ O SDD Starter Pack mostra **como sair desse modelo e operar em modo industrial.*
 * Migrar stacks via especificação
 * Criar pipelines de CI/CD baseados em spec
 
+> **Note:** SDD não é apenas uma metodologia, é uma mudança de mentalidade. Você passa de "escritor de código" para "arquiteto de sistemas".
+
 ---
 
 ## Estrutura do guia
@@ -66,6 +68,8 @@ O SDD Starter Pack mostra **como sair desse modelo e operar em modo industrial.*
 /examples  → Sistemas reais gerados por specs  
 AGENTS.md  → Guardrails de execução da IA  
 ```
+
+> **Tip:** Explore os exemplos em `/examples` para ver especificações reais em diferentes formatos (Markdown, YAML, JSON).
 
 ---
 
@@ -88,6 +92,10 @@ Sistema Artesanal → Especificações → Regeneração → Sistema SDD
 4. Gere código
 5. Itere via especificação
 
+> **Note:** Se você está começando agora, recomendamos começar pelo Lab 1 para entender o fluxo completo antes de migrar projetos existentes.
+
+> **Tip:** Mantenha sempre o arquivo `AGENTS.md` atualizado. Ele é essencial para garantir que a IA gere código consistente com seus padrões.
+
 ---
 
 ## Princípios
@@ -97,6 +105,8 @@ Sistema Artesanal → Especificações → Regeneração → Sistema SDD
 * IA executa, humano decide
 * Código é derivado, não origem
 * Mudanças são regenerações
+
+> **Note:** Esses princípios são fundamentais. Violá-los significa voltar ao modelo artesanal. Sempre valide se suas práticas estão alinhadas com esses princípios.
 
 ---
 

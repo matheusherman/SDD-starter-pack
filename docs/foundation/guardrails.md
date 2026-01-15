@@ -5,6 +5,8 @@ Este documento define **o papel dos guardrails em projetos SDD** e como eles tra
 Sem guardrails, você não tem SDD.
 Você tem *vibe coding com esteroides*.
 
+> **Note:** Guardrails são obrigatórios. Sem eles, cada geração de código pode produzir resultados diferentes, quebrando a regenerabilidade.
+
 ---
 
 ## O que são guardrails
@@ -20,6 +22,8 @@ Eles definem:
 * Quais padrões são obrigatórios
 
 Guardrails transformam a IA em **força de trabalho industrial**, não em artista criativo.
+
+> **Tip:** Pense nos guardrails como o "manual da fábrica". Eles definem como a IA deve trabalhar, não o que ela deve criar.
 
 ---
 
@@ -48,6 +52,8 @@ Sem guardrails:
 * Regeneração se torna imprevisível
 
 O sistema deixa de ser regenerável.
+
+> **Note:** Regenerabilidade é o coração do SDD. Sem ela, você volta ao modelo artesanal onde cada mudança é uma refatoração arriscada.
 
 ---
 
@@ -159,3 +165,5 @@ Com guardrails, a spec vira **lei**.
 ## Regra de ouro
 
 > Se a IA pode inventar, você não tem SDD.
+
+> **Tip:** Se você notar que a IA está "adicionando funcionalidades úteis" não especificadas, isso indica que seus guardrails não estão sendo seguidos. Revise o `AGENTS.md`.

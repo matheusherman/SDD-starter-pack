@@ -17,6 +17,8 @@ Sem padrão estrutural:
 
 Com estrutura, o sistema vira um **blueprint organizado**.
 
+> **Note:** A estrutura não é apenas organização. Ela define a ordem de leitura e processamento das specs pela IA.
+
 ---
 
 ## Estrutura base do projeto
@@ -68,7 +70,9 @@ Define decisões arquiteturais:
 * Integrações
 * Regras estruturais
 
-Ela impede que a IA “invente arquitetura”.
+Ela impede que a IA "invente arquitetura".
+
+> **Tip:** Sem um arquivo de arquitetura explícito, cada geração pode produzir estruturas diferentes. Defina a arquitetura antes de gerar código.
 
 ---
 
@@ -124,3 +128,4 @@ O código é sempre consequência.
 
 > Um sistema SDD é completamente reconstruível apenas pela pasta `/spec`.
 
+> **Note:** Use esta regra como teste. Se você apagar todo o código e não conseguir regenerar o sistema apenas com as specs, algo está faltando na especificação.

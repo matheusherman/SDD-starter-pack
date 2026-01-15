@@ -17,6 +17,8 @@ Ideia → Contexto → Especificação → Geração → Validação → Iteraç
 
 Todo trabalho acontece **antes do código existir**.
 
+> **Note:** Em SDD, você investe tempo pensando e especificando antes de gerar código. Isso pode parecer mais lento, mas reduz drasticamente o tempo de refatoração e manutenção.
+
 ---
 
 ## 1. Ideia
@@ -63,6 +65,8 @@ Você define:
 
 A especificação remove ambiguidades antes que o código exista.
 
+> **Tip:** Quanto mais tempo você investir na especificação, menos tempo gastará corrigindo bugs e refatorando código gerado.
+
 ---
 
 ## 4. Geração
@@ -77,6 +81,8 @@ A IA:
 * Respeita os guardrails definidos
 
 O código nasce como uma **materialização exata do blueprint**.
+
+> **Note:** O código gerado não deve conter decisões não especificadas. Se encontrar algo assim, a spec precisa ser mais completa.
 
 ---
 
@@ -125,3 +131,4 @@ Você faz deploy de um sistema:
 > Nunca corrija o código.
 > Sempre corrija o blueprint.
 
+> **Tip:** Esta é a regra de ouro do SDD. Se você encontrar um bug, não edite o código. Corrija a spec e regenere. Isso mantém o sistema regenerável.
