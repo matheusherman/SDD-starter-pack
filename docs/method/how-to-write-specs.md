@@ -12,7 +12,8 @@ SDD só funciona se as specs forem claras, completas e testáveis.
 
 Uma boa spec não deixa decisões implícitas.
 
-> **Note:** Use este princípio como teste. Se você ler sua spec e pensar "a IA pode adivinhar o que fazer aqui", a spec precisa ser mais específica.
+> [!NOTE]
+> Use este princípio como teste. Se você ler sua spec e pensar "a IA pode adivinhar o que fazer aqui", a spec precisa ser mais específica.
 
 ---
 
@@ -28,7 +29,8 @@ Pergunte:
 * Com quais respostas?
 * Com quais restrições?
 
-> **Tip:** Comece sempre respondendo essas perguntas antes de escrever a spec. Isso garante que você está definindo comportamento, não implementação.
+> [!TIP]
+> Comece sempre respondendo essas perguntas antes de escrever a spec. Isso garante que você está definindo comportamento, não implementação.
 
 ---
 
@@ -74,7 +76,8 @@ Todo erro deve ser definido:
 
 Nada deve "falhar silenciosamente".
 
-> **Note:** Todo erro deve ser explícito. Se algo pode dar errado, defina o código de erro, a mensagem e a condição que o dispara.
+> [!NOTE]
+> Todo erro deve ser explícito. Se algo pode dar errado, defina o código de erro, a mensagem e a condição que o dispara.
 
 ---
 
@@ -113,7 +116,8 @@ Valide specs.
 
 O código apenas executa.
 
-> **Tip:** Trate specs como código. Use Git, faça code review, mantenha histórico. A spec é o ativo mais valioso do projeto.
+> [!TIP]
+> Trate specs como código. Use Git, faça code review, mantenha histórico. A spec é o ativo mais valioso do projeto.
 
 ---
 

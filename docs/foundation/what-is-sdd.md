@@ -14,7 +14,8 @@ O código é apenas uma materialização automática dessas regras.
 O papel do humano muda de executor para arquiteto.
 O papel da IA muda de assistente para força de trabalho.
 
-> **Note:** Esta mudança de papel é fundamental. Em SDD, você não "escreve código", você "projeta sistemas através de especificações".
+> [!NOTE]
+> Esta mudança de papel é fundamental. Em SDD, você não "escreve código", você "projeta sistemas através de especificações".
 
 ---
 
@@ -36,7 +37,8 @@ Resultado:
 * Baixa previsibilidade
 * Escalabilidade limitada
 
-> **Tip:** Se você reconhece esses problemas no seu projeto atual, SDD pode ser a solução. Comece migrando uma feature pequena para validar o método.
+> [!TIP]
+> Se você reconhece esses problemas no seu projeto atual, SDD pode ser a solução. Comece migrando uma feature pequena para validar o método.
 
 ---
 
@@ -66,7 +68,8 @@ Elas são **blueprints executáveis**:
 
 Você pode apagar o código e reconstruí-lo a qualquer momento a partir das specs.
 
-> **Note:** A regenerabilidade total é o que diferencia SDD de outras metodologias. O código é descartável, a spec é permanente.
+> [!NOTE]
+> A regenerabilidade total é o que diferencia SDD de outras metodologias. O código é descartável, a spec é permanente.
 
 ---
 
@@ -78,7 +81,8 @@ Ideia → Contexto → Especificação → Geração por IA → Validação → 
 
 A iteração acontece na especificação, não no código.
 
-> **Tip:** Quando precisar fazer uma mudança, pergunte-se: "Onde está a spec que define isso?" e altere a spec, não o código.
+> [!TIP]
+> Quando precisar fazer uma mudança, pergunte-se: "Onde está a spec que define isso?" e altere a spec, não o código.
 
 ---
 

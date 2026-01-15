@@ -4,7 +4,8 @@ Uma **especificação** é um blueprint executável que define, de forma explíc
 
 Se algo não está na especificação, **não existe no sistema**.
 
-> **Note:** Esta é uma regra absoluta em SDD. Não há exceções. Se você precisa de um comportamento, ele deve estar na spec.
+> [!NOTE]
+> Esta é uma regra absoluta em SDD. Não há exceções. Se você precisa de um comportamento, ele deve estar na spec.
 
 ---
 
@@ -84,7 +85,8 @@ Rules:
 Aqui não existe interpretação.
 Existe **execução**.
 
-> **Tip:** Use sempre linguagem determinística. Evite palavras como "pode", "deve tentar", "preferencialmente". Use "deve", "sempre", "nunca".
+> [!TIP]
+> Use sempre linguagem determinística. Evite palavras como "pode", "deve tentar", "preferencialmente". Use "deve", "sempre", "nunca".
 
 ---
 
@@ -117,7 +119,8 @@ O formato é menos importante que:
 * Testabilidade
 * Executabilidade
 
-> **Note:** Escolha um formato e mantenha consistência. Markdown é popular por ser legível por humanos e processável por IAs.
+> [!NOTE]
+> Escolha um formato e mantenha consistência. Markdown é popular por ser legível por humanos e processável por IAs.
 
 ---
 

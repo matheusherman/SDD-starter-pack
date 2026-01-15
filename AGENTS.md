@@ -5,7 +5,8 @@
 Este arquivo define **guardrails (regras firmes de execução)** que a IA deve seguir ao gerar código a partir das especificações.
 Ele garante consistência, conformidade com arquitetura e padrões obrigatórios.
 
-> **Note:** Este arquivo é obrigatório para qualquer projeto SDD. Sem ele, a IA pode gerar código inconsistente ou que viole seus padrões arquiteturais.
+> [!NOTE]
+> Este arquivo é obrigatório para qualquer projeto SDD. Sem ele, a IA pode gerar código inconsistente ou que viole seus padrões arquiteturais.
 
 ---
 
@@ -16,14 +17,16 @@ Ele garante consistência, conformidade com arquitetura e padrões obrigatórios
 A IA **não deve gerar nenhum comportamento que não esteja explicitamente declarado nas specs** em `/spec`.
 Qualquer funcionalidade adicional precisa antes ser adicionada à especificação.
 
-> **Note:** Esta é a regra mais importante do SDD. Violá-la significa voltar ao modelo artesanal onde o código contém regras implícitas.
+> [!NOTE]
+> Esta é a regra mais importante do SDD. Violá-la significa voltar ao modelo artesanal onde o código contém regras implícitas.
 
 ### 1.2 Não inventar
 
 A IA **não pode inferir, adivinhar ou completar regras que não estejam escritas na spec**.
 Se a spec estiver incompleta, gere um erro de validação pedindo que a spec seja completada.
 
-> **Tip:** Se a IA sugerir funcionalidades "úteis" não especificadas, adicione-as primeiro à spec antes de aceitar a geração.
+> [!TIP]
+> Se a IA sugerir funcionalidades "úteis" não especificadas, adicione-as primeiro à spec antes de aceitar a geração.
 
 ### 1.3 Não modifique specs
 
@@ -50,7 +53,8 @@ A IA deve gerar a estrutura de projeto seguindo este padrão:
 
 Arquivos de spec nunca devem ser inseridos em `/src`.
 
-> **Note:** A separação entre `/spec` e `/src` é fundamental. Especificações são blueprints, não código executável.
+> [!NOTE]
+> A separação entre `/spec` e `/src` é fundamental. Especificações são blueprints, não código executável.
 
 ### 2.2 Separação de responsabilidades
 
@@ -61,7 +65,8 @@ Arquivos de spec nunca devem ser inseridos em `/src`.
 
 A IA não deve colocar regras de negócio dentro de controllers.
 
-> **Tip:** Se você encontrar lógica de negócio em controllers, isso indica que a spec não foi seguida corretamente. Regenerar o código pode resolver o problema.
+> [!TIP]
+> Se você encontrar lógica de negócio em controllers, isso indica que a spec não foi seguida corretamente. Regenerar o código pode resolver o problema.
 
 ---
 
@@ -81,7 +86,8 @@ Para cada módulo gerado, a IA deve criar **testes automatizados** que cobrem:
 * Casos de erro
 * Regras explícitas da spec
 
-> **Note:** Testes são parte do sistema, não opcionais. Eles validam que o código gerado corresponde exatamente à especificação.
+> [!NOTE]
+> Testes são parte do sistema, não opcionais. Eles validam que o código gerado corresponde exatamente à especificação.
 
 ---
 
@@ -104,7 +110,8 @@ Todas as APIs REST devem seguir este contrato mínimo:
 
 A IA deve usar esse formato para **todas as respostas**, incluindo erros.
 
-> **Tip:** Este formato padronizado facilita o tratamento de erros no frontend e garante consistência em toda a API.
+> [!TIP]
+> Este formato padronizado facilita o tratamento de erros no frontend e garante consistência em toda a API.
 
 ### 4.2 Validações de entrada
 
@@ -123,7 +130,8 @@ A IA deve gerar validações de entrada que:
 * APIs públicas devem obrigatoriamente exigir autenticação se a spec indicar.
 * Se uma spec não declarar que um endpoint é público, a IA deve **assumir que ele precisa de autorização por padrão**.
 
-> **Note:** Segurança por padrão é uma prática essencial. Endpoints públicos devem ser explicitamente declarados na spec.
+> [!NOTE]
+> Segurança por padrão é uma prática essencial. Endpoints públicos devem ser explicitamente declarados na spec.
 
 ### 5.2 Proteções básicas
 
@@ -175,7 +183,8 @@ Se a IA identificar algo “útil mas não especifícado”, ela deve:
 
 Todo código gerado deve poder ser completamente apagado e regenerado a partir das mesmas specs + podem ser reproduzido com resultados equivalentes.
 
-> **Note:** A regenerabilidade total é o que permite refatorações sem medo, migrações de stack e evolução contínua do sistema.
+> [!NOTE]
+> A regenerabilidade total é o que permite refatorações sem medo, migrações de stack e evolução contínua do sistema.
 
 ---
 
@@ -223,4 +232,5 @@ Do not invent or assume behavior not defined in spec.
 Return code + tests + documentation.
 ```
 
-> **Tip:** Sempre inclua o `AGENTS.md` junto com as specs ao solicitar geração de código. Ele garante que a IA siga seus padrões arquiteturais e de qualidade.
+> [!TIP]
+> Sempre inclua o `AGENTS.md` junto com as specs ao solicitar geração de código. Ele garante que a IA siga seus padrões arquiteturais e de qualidade.

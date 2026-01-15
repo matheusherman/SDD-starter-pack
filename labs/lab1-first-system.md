@@ -36,7 +36,8 @@ Antes de começar, certifique-se de ter:
 * Node.js ou Python instalado (dependendo da stack que será gerada)
 * Git instalado (opcional, mas recomendado)
 
-> **Tip:** Se você não tem experiência com Node.js ou Python, escolha um e instale antes de começar. O lab funciona com qualquer um dos dois.
+> [!TIP]
+> Se você não tem experiência com Node.js ou Python, escolha um e instale antes de começar. O lab funciona com qualquer um dos dois.
 
 ---
 
@@ -75,7 +76,8 @@ Você criará a seguinte estrutura:
 
 Está definindo o contexto geral do sistema. Este arquivo estabelece o domínio, os atores envolvidos e o propósito principal. É como criar a "capa" do seu projeto.
 
-> **Note:** Este arquivo é fundamental. Sem ele, a IA não terá contexto suficiente para gerar o sistema corretamente.
+> [!NOTE]
+> Este arquivo é fundamental. Sem ele, a IA não terá contexto suficiente para gerar o sistema corretamente.
 
 ### Ação
 
@@ -107,7 +109,8 @@ Um arquivo de especificação que define:
 ✅ Arquivo criado em `/spec/00-general-context.spec.md`  
 ✅ Conteúdo copiado corretamente
 
-> **Tip:** Use a numeração `00-` para arquivos de contexto. Eles são lidos primeiro pela IA e estabelecem o terreno do sistema.
+> [!TIP]
+> Use a numeração `00-` para arquivos de contexto. Eles são lidos primeiro pela IA e estabelecem o terreno do sistema.
 
 ---
 
@@ -117,7 +120,8 @@ Um arquivo de especificação que define:
 
 Está definindo o contrato da API REST que permitirá criar pedidos. Esta especificação define exatamente como o cliente vai interagir com o sistema.
 
-> **Note:** Este é o contrato entre o sistema e seus consumidores. Qualquer mudança aqui afetará todos os clientes da API.
+> [!NOTE]
+> Este é o contrato entre o sistema e seus consumidores. Qualquer mudança aqui afetará todos os clientes da API.
 
 ### Ação
 
@@ -180,7 +184,8 @@ E receberá uma resposta como:
 ✅ Arquivo criado em `/spec/01-create-order.spec.md`  
 ✅ Especificação completa com input, output e regras
 
-> **Tip:** Sempre defina validações na spec. Isso garante que a IA gere código que rejeite entradas inválidas desde o início.
+> [!TIP]
+> Sempre defina validações na spec. Isso garante que a IA gere código que rejeite entradas inválidas desde o início.
 
 ---
 
@@ -190,7 +195,8 @@ E receberá uma resposta como:
 
 Está definindo a lógica de negócio para cálculo de preços. Esta regra será executada automaticamente quando um pedido for criado, aplicando descontos e impostos conforme o tipo de cliente.
 
-> **Note:** Regras de negócio devem sempre estar em arquivos separados de API. Isso permite reutilização e facilita testes.
+> [!NOTE]
+> Regras de negócio devem sempre estar em arquivos separados de API. Isso permite reutilização e facilita testes.
 
 ### Ação
 
@@ -240,7 +246,8 @@ Uma regra de negócio que:
 ✅ Arquivo criado em `/spec/02-pricing.spec.md`  
 ✅ Lógica de desconto e imposto definida claramente
 
-> **Tip:** Use exemplos numéricos para validar se sua lógica está correta antes de gerar o código. Isso evita bugs de cálculo.
+> [!TIP]
+> Use exemplos numéricos para validar se sua lógica está correta antes de gerar o código. Isso evita bugs de cálculo.
 
 ---
 
@@ -250,7 +257,8 @@ Uma regra de negócio que:
 
 Está definindo a máquina de estados que controla o ciclo de vida do pedido. Esta especificação garante que as transições de estado sejam válidas e consistentes.
 
-> **Note:** Máquinas de estado previnem estados inválidos. Sem elas, você pode ter pedidos "pagos" que nunca foram criados, por exemplo.
+> [!NOTE]
+> Máquinas de estado previnem estados inválidos. Sem elas, você pode ter pedidos "pagos" que nunca foram criados, por exemplo.
 
 ### Ação
 
@@ -324,7 +332,8 @@ Antes de solicitar a geração, certifique-se de ter:
 - ✅ Todos os 4 arquivos de spec criados em `/spec`
 - ✅ Estrutura de diretórios organizada
 
-> **Tip:** Revise todas as specs antes de gerar. Uma vez que o código é gerado, mudanças devem ser feitas nas specs primeiro.
+> [!TIP]
+> Revise todas as specs antes de gerar. Uma vez que o código é gerado, mudanças devem ser feitas nas specs primeiro.
 
 ### Ação
 
@@ -338,7 +347,8 @@ Antes de solicitar a geração, certifique-se de ter:
 
 3. Se houver um arquivo `AGENTS.md` no projeto, inclua-o também (ele pode conter instruções sobre como gerar o código)
 
-> **Note:** O `AGENTS.md` é obrigatório em projetos SDD. Ele garante que a IA siga seus padrões arquiteturais e de qualidade.
+> [!NOTE]
+> O `AGENTS.md` é obrigatório em projetos SDD. Ele garante que a IA siga seus padrões arquiteturais e de qualidade.
 
 4. Solicite a geração com o seguinte prompt:
 
@@ -389,7 +399,8 @@ A IA gerará uma estrutura completa de projeto, incluindo:
 ✅ Arquivos de configuração presentes (package.json, requirements.txt, etc.)  
 ✅ README com instruções de setup
 
-> **Tip:** Não edite o código gerado manualmente. Se algo estiver errado, corrija a spec e regenere. Isso mantém o sistema regenerável.
+> [!TIP]
+> Não edite o código gerado manualmente. Se algo estiver errado, corrija a spec e regenere. Isso mantém o sistema regenerável.
 
 ---
 
@@ -399,7 +410,8 @@ A IA gerará uma estrutura completa de projeto, incluindo:
 
 Agora você vai testar o sistema gerado para garantir que ele funciona exatamente como especificado. Esta é a fase de validação do SDD.
 
-> **Note:** Validação não é "testar se funciona". É validar se o comportamento corresponde exatamente à especificação.
+> [!NOTE]
+> Validação não é "testar se funciona". É validar se o comportamento corresponde exatamente à especificação.
 
 ### Setup do ambiente
 
@@ -412,7 +424,8 @@ Agora você vai testar o sistema gerado para garantir que ele funciona exatament
    pip install -r requirements.txt
    ```
 
-> **Tip:** Se encontrar erros de dependências, verifique se a versão do Node.js ou Python está compatível com o que foi gerado.
+> [!TIP]
+> Se encontrar erros de dependências, verifique se a versão do Node.js ou Python está compatível com o que foi gerado.
 
 2. **Inicie o servidor:**
    ```bash
@@ -519,7 +532,8 @@ Após a validação, você terá:
 - ✅ Confiança de que as specs foram interpretadas corretamente
 - ✅ Base sólida para iterações futuras
 
-> **Tip:** Documente qualquer divergência entre o comportamento esperado e o observado. Isso pode indicar que a spec precisa ser mais clara.
+> [!TIP]
+> Documente qualquer divergência entre o comportamento esperado e o observado. Isso pode indicar que a spec precisa ser mais clara.
 
 ---
 
@@ -529,7 +543,8 @@ Após a validação, você terá:
 
 Agora você vai experimentar o poder do SDD: fazer mudanças no sistema **alterando apenas as especificações**, sem tocar no código gerado. A IA gerará o código novamente com as mudanças.
 
-> **Note:** Esta é a diferença fundamental entre SDD e desenvolvimento tradicional. Mudanças acontecem na spec, não no código.
+> [!NOTE]
+> Esta é a diferença fundamental entre SDD e desenvolvimento tradicional. Mudanças acontecem na spec, não no código.
 
 ### Cenário de mudança
 
@@ -587,7 +602,8 @@ Isso demonstra o poder do SDD:
 - ✅ Menos chance de erros manuais
 - ✅ Especificação sempre sincronizada com o código
 
-> **Tip:** Experimente fazer mudanças maiores, como adicionar novos tipos de cliente ou estados. Isso demonstra a flexibilidade do SDD.
+> [!TIP]
+> Experimente fazer mudanças maiores, como adicionar novos tipos de cliente ou estados. Isso demonstra a flexibilidade do SDD.
 
 ### Outras iterações possíveis
 
@@ -645,7 +661,8 @@ No SDD, você:
 - Valida que o resultado está correto
 - Itera mudando apenas as specs
 
-> **Note:** Esta mudança de mentalidade é o que transforma desenvolvimento de "artesanato" em "indústria". Você se torna arquiteto, não executor.
+> [!NOTE]
+> Esta mudança de mentalidade é o que transforma desenvolvimento de "artesanato" em "indústria". Você se torna arquiteto, não executor.
 
 ### Próximos passos
 

@@ -14,7 +14,8 @@ Valide sempre:
 
 > "O sistema se comporta exatamente como a especificação define?"
 
-> **Note:** Validação em SDD não é sobre "funcionalidade", é sobre "conformidade com a spec". O sistema pode "funcionar" mas estar errado se não seguir a especificação.
+> [!NOTE]
+> Validação em SDD não é sobre "funcionalidade", é sobre "conformidade com a spec". O sistema pode "funcionar" mas estar errado se não seguir a especificação.
 
 ---
 
@@ -65,7 +66,8 @@ Validação acontece em três níveis:
 
 Toda iteração começa pela spec.
 
-> **Tip:** Se você está pensando em editar código diretamente, pare. Pergunte-se: "O que na spec precisa mudar?" e altere a spec primeiro.
+> [!TIP]
+> Se você está pensando em editar código diretamente, pare. Pergunte-se: "O que na spec precisa mudar?" e altere a spec primeiro.
 
 | Errado                | Correto             |
 | --------------------- | ------------------- |
@@ -106,4 +108,5 @@ Ele é continuamente regenerável.
 > O código é descartável.
 > A especificação é o sistema.
 
-> **Note:** Esta mentalidade é fundamental. O código pode ser apagado e regenerado a qualquer momento. A spec é o que importa.
+> [!NOTE]
+> Esta mentalidade é fundamental. O código pode ser apagado e regenerado a qualquer momento. A spec é o que importa.

@@ -55,7 +55,8 @@ O SDD Starter Pack mostra **como sair desse modelo e operar em modo industrial.*
 * Migrar stacks via especificação
 * Criar pipelines de CI/CD baseados em spec
 
-> **Note:** SDD não é apenas uma metodologia, é uma mudança de mentalidade. Você passa de "escritor de código" para "arquiteto de sistemas".
+> [!NOTE]
+> SDD não é apenas uma metodologia, é uma mudança de mentalidade. Você passa de "escritor de código" para "arquiteto de sistemas".
 
 ---
 
@@ -69,7 +70,8 @@ O SDD Starter Pack mostra **como sair desse modelo e operar em modo industrial.*
 AGENTS.md  → Guardrails de execução da IA  
 ```
 
-> **Tip:** Explore os exemplos em `/examples` para ver especificações reais em diferentes formatos (Markdown, YAML, JSON).
+> [!TIP]
+> Explore os exemplos em `/examples` para ver especificações reais em diferentes formatos (Markdown, YAML, JSON).
 
 ---
 
@@ -92,9 +94,11 @@ Sistema Artesanal → Especificações → Regeneração → Sistema SDD
 4. Gere código
 5. Itere via especificação
 
-> **Note:** Se você está começando agora, recomendamos começar pelo Lab 1 para entender o fluxo completo antes de migrar projetos existentes.
+> [!NOTE]
+> Se você está começando agora, recomendamos começar pelo Lab 1 para entender o fluxo completo antes de migrar projetos existentes.
 
-> **Tip:** Mantenha sempre o arquivo `AGENTS.md` atualizado. Ele é essencial para garantir que a IA gere código consistente com seus padrões.
+> [!TIP]
+> Mantenha sempre o arquivo `AGENTS.md` atualizado. Ele é essencial para garantir que a IA gere código consistente com seus padrões.
 
 ---
 
@@ -106,7 +110,8 @@ Sistema Artesanal → Especificações → Regeneração → Sistema SDD
 * Código é derivado, não origem
 * Mudanças são regenerações
 
-> **Note:** Esses princípios são fundamentais. Violá-los significa voltar ao modelo artesanal. Sempre valide se suas práticas estão alinhadas com esses princípios.
+> [!NOTE]
+> Esses princípios são fundamentais. Violá-los significa voltar ao modelo artesanal. Sempre valide se suas práticas estão alinhadas com esses princípios.
 
 ---
 

@@ -24,7 +24,8 @@ Essa regra garante:
 * Rastreabilidade
 * Controle de comportamento
 
-> **Note:** Sem essa regra, cada geração pode produzir código diferente, mesmo com as mesmas specs. Isso quebra a regenerabilidade.
+> [!NOTE]
+> Sem essa regra, cada geração pode produzir código diferente, mesmo com as mesmas specs. Isso quebra a regenerabilidade.
 
 ---
 
@@ -44,7 +45,8 @@ Essa regra força o humano a:
 * Formalizar decisões
 * Transformar conhecimento em blueprint
 
-> **Tip:** Se você está tendo dificuldade em escrever specs completas, comece pequeno. Uma spec incompleta é melhor que nenhuma spec.
+> [!TIP]
+> Se você está tendo dificuldade em escrever specs completas, comece pequeno. Uma spec incompleta é melhor que nenhuma spec.
 
 ---
 
@@ -76,7 +78,8 @@ Você tem apenas “confiança”.
 
 Testes tornam a spec **executável de verdade**.
 
-> **Note:** Testes não são opcionais em SDD. Eles são a validação de que o código gerado corresponde à especificação.
+> [!NOTE]
+> Testes não são opcionais em SDD. Eles são a validação de que o código gerado corresponde à especificação.
 
 ---
 
@@ -138,4 +141,5 @@ Isso elimina documentação manual, que sempre fica desatualizada.
 
 > Se a IA puder adivinhar, o sistema já morreu.
 
-> **Tip:** Use esta regra como teste. Se você ler uma spec e pensar "a IA pode adivinhar o que fazer aqui", a spec precisa ser mais específica.
+> [!TIP]
+> Use esta regra como teste. Se você ler uma spec e pensar "a IA pode adivinhar o que fazer aqui", a spec precisa ser mais específica.
