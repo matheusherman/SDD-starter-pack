@@ -1,0 +1,26 @@
+AllCops:
+  TargetRubyVersion: 3.2
+  Exclude:
+    - "bin/**/*"
+    - "config/**/*"
+    - "db/**/*"
+    - "node_modules/**/*"
+    - "vendor/**/*"
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/ClassLength:
+  Max: 100
+
+Layout/EmptyLineAfterMagicComment:
+  Enabled: false
