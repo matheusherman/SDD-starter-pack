@@ -160,7 +160,7 @@ Edite o arquivo com o seguinte conteúdo:
   - Data Layer (persistence)
 
 ### Project Organization
-```
+~~~
 /app
   /controllers  # HTTP endpoints
   /models       # Data models (Active Record)
@@ -169,7 +169,7 @@ Edite o arquivo com o seguinte conteúdo:
 /spec           # RSpec tests
 /config         # Configuration
 /db             # Database migrations
-```
+~~~
 
 ### Architectural Constraints
 - No business logic in controllers
@@ -192,6 +192,7 @@ Edite o arquivo com o seguinte conteúdo:
 ## 7. Business Context
 Sistema simples para demonstrar SDD em ação.
 Foco em CRUD básico de tarefas sem autenticação (por enquanto).
+
 ```
 
 > [!NOTE]
@@ -222,17 +223,17 @@ touch spec/01-create-task.spec.md
 User can create a new task with title and description.
 
 ## Endpoint
-```
+
 POST /api/tasks
-```
 
 ## Input
-```json
+
+~~~json
 {
   "title": string (required, 1-100 chars),
   "description": string (optional, max 500 chars)
 }
-```
+~~~
 
 ## Processing
 1. Validate input format
@@ -243,7 +244,7 @@ POST /api/tasks
 6. Return created task
 
 ## Output Success (201 Created)
-```json
+~~~json
 {
   "status": "success",
   "data": {
@@ -254,12 +255,12 @@ POST /api/tasks
     "createdAt": "2026-01-16T10:00:00Z"
   }
 }
-```
+~~~
 
 ## Output Errors
 
 ### 400 INVALID_INPUT
-```json
+~~~json
 {
   "status": "error",
   "error": {
@@ -267,7 +268,7 @@ POST /api/tasks
     "message": "Title is required and must be between 1-100 characters"
   }
 }
-```
+~~~
 
 ## Test Cases
 - ✅ Create task with title only
@@ -326,13 +327,13 @@ Edite o arquivo `AGENTS.md` na raiz do projeto:
 ## 2. ARQUITETURA
 
 ### 2.1 Estrutura obrigatória
-```
+~~~
 /app
   /controllers  # Controllers apenas (herdam de ApplicationController)
   /models       # Active Record models
   /services     # Business logic (POROs - Plain Old Ruby Objects)
 /spec           # RSpec tests
-```
+~~~
 
 ### 2.2 Separação de responsabilidades
 - Controllers: apenas request/response handling
@@ -358,7 +359,7 @@ Edite o arquivo `AGENTS.md` na raiz do projeto:
 ### 4.1 Formato de resposta padrão
 Todas as respostas devem seguir:
 
-```json
+~~~json
 {
   "status": "success" | "error",
   "data": <object | null>,
@@ -367,7 +368,7 @@ Todas as respostas devem seguir:
     "message": string
   }
 }
-```
+~~~
 
 ### 4.2 Validações
 - Validar todos os inputs conforme spec
