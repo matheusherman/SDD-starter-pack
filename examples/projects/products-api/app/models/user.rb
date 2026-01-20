@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   # Associations
   has_secure_password
+  has_one :cart, foreign_key: :user_id, primary_key: :id, dependent: :destroy
+  has_many :orders, foreign_key: :user_id, primary_key: :id, dependent: :destroy
 
   # Attributes
   attr_accessor :token
