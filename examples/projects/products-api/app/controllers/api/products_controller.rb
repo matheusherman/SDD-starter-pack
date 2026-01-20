@@ -13,22 +13,57 @@ class Api::ProductsController < ApplicationController
     offset = (page - 1) * limit
     total = Product.count
     products = Product.order("#{sort} #{order}").offset(offset).limit(limit)
+    total_pages = (total / limit.to_f).ceil
 
     render json: {
       status: "success",
-      data: products.map { |p| serialize_product(p) },
+      data: products.map { |p| ProductSerializer.new(p).serialize },
       meta: {
         total: total,
         page: page,
         limit: limit,
-        totalPages: (total / limit.to_f).ceil
+        totalPages: total_pages
       }
     }, status: :ok
   end
 
+  def show
+    # Validate UUID format
+    unless params[:id].match?(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i)
+      return render json: {
+        status: "error",
+        error: {
+          code: "INVALID_PRODUCT_ID",
+          message: "ID do produto inválido"
+        }
+      }, status: :bad_request
+    end
+
+    begin
+      product = Product.find(params[:id])
+      render json: { status: "success", data: ProductSerializer.new(product).serialize }, status: :ok
+    rescue ActiveRecord::RecordNotFound
+      render json: {
+        status: "error",
+        error: {
+          code: "PRODUCT_NOT_FOUND",
+          message: "Produto não encontrado"
+        }
+      }, status: :not_found
+    rescue StandardError => e
+      render json: {
+        status: "error",
+        error: {
+          code: "INVALID_PRODUCT_ID",
+          message: "ID do produto inválido"
+        }
+      }, status: :bad_request
+    end
+  end
+
   def create
     product = CreateProductService.new(product_params).call
-    render json: { status: "success", data: serialize_product(product) }, status: :created
+    render json: { status: "success", data: ProductSerializer.new(product).serialize }, status: :created
   rescue ArgumentError => e
     handle_argument_error(e)
   end
@@ -38,7 +73,7 @@ class Api::ProductsController < ApplicationController
     authorize_admin!
     
     product = UpdateProductService.new(@product, product_params).call
-    render json: { status: "success", data: serialize_product(product) }, status: :ok
+    render json: { status: "success", data: ProductSerializer.new(product).serialize }, status: :ok
   rescue ArgumentError => e
     handle_argument_error(e)
   end
@@ -65,18 +100,6 @@ class Api::ProductsController < ApplicationController
 
   def product_params
     params.permit(:title, :description, :quantity, :price)
-  end
-
-  def serialize_product(product)
-    {
-      id: product.id,
-      title: product.title,
-      description: product.description,
-      quantity: product.quantity,
-      price: product.price.to_f,
-      createdAt: product.created_at.iso8601,
-      updatedAt: product.updated_at.iso8601
-    }
   end
 
   def validate_pagination_params!(page, limit)

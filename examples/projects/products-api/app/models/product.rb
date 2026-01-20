@@ -1,4 +1,10 @@
 class Product < ApplicationRecord
+  # Associations
+  has_many :cart_items, foreign_key: :product_id, primary_key: :id, dependent: :destroy
+  has_many :carts, through: :cart_items
+  has_many :order_items, foreign_key: :product_id, primary_key: :id, dependent: :destroy
+  has_many :orders, through: :order_items
+
   # Validations
   validates :title, presence: true, length: { minimum: 1, maximum: 100 }
   validates :description, length: { maximum: 500 }, allow_blank: true
